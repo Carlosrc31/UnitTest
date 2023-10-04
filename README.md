@@ -1,37 +1,15 @@
-# Building project locally
-Install VirtualEnvironment (one time)
+# Unit Testing app
+Using Pytest (Pyhton). The main purpose is to automate tests for the app. 
 
-    >python -m pip install virtualenv
-
-Create virtual environment
-
-    >virtualenv virtual_project
-
-1. This will create a virtual environment project folder and install python there.
-2. This step can be skipped if you already have the folder locally.
-
-Open virtual environment (Unix type OS)
-
-    >source virtual_project/bin/activate
-
-1. This will activate the virtual environment.  Yous should see `(virtual_project)` to the left of the terminal prompt.
-2. This step will be needed each time.
-
-Install requirements
-    
-    >python -m pip install -r requirements.txt
-
-Install local src/ folder
-
-    >python -m pip install -e src 
-
-# Building Docker image
-At the root of the project run
-
-    >docker image build -t YOUR_NAME .
-
-This will create a docker image using the `Dockerfile` with the image name `YOUR_NAME`
-
-Run container
-
-    >docker run YOUR_NAME
+Instructions for Windows
+## Run
+### Creating virtual environment
+    python -m venv virtual_env
+### Activating virtual environment
+    .\virtual_env\Scripts\activate
+### Installing flask using pip
+	pip install flask
+### Command to install all the libraries needed
+	pip freeze -r requirements.txt
+### To run the app
+    py app.py
